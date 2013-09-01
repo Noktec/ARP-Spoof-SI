@@ -33,8 +33,8 @@ INSTALL
 
 Compile with gcc:
 
-```
-	$ gcc $(libnet-config --defines) -o arp_spoof_si arp_spoof_si.c -lnet -lpcap
+```	
+$ gcc $(libnet-config --defines) -o arp_spoof_si arp_spoof_si.c -lnet -lpcap
 ```
 
 
@@ -50,6 +50,7 @@ $ sudo ./arp_spoof_si <IP target 1> <IP target 2> [OPTIONS]
 
 
 Examples:
-```	sudo ./arp_spoof_si 192.168.1.1 192.168.1.10
-	sudo ./arp_spoof_si 10.0.1.99 10.0.1.1 -i eth1
+```	
+sudo ./arp_spoof_si 192.168.1.1 192.168.1.10
+sudo ./arp_spoof_si 10.0.1.99 10.0.1.1 -i eth1
 ```
