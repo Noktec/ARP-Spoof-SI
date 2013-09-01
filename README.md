@@ -1,4 +1,4 @@
-ARP Spoof SI is an application that uses ARP packets for establishing a
+ARP Spoof SI is an application that uses ARP packets for creating a
 Man In The Middle (MITM) attack.
 
 Copyright (C) 2012  Antonin Beaujeant
@@ -33,19 +33,23 @@ INSTALL
 
 Compile with gcc:
 
-	gcc $(libnet-config --defines) -o arp_spoof_si arp_spoof_si.c -lnet -lpcap
+```
+	$ gcc $(libnet-config --defines) -o arp_spoof_si arp_spoof_si.c -lnet -lpcap
+```
 
 
 USAGE
 -----
+```
+$ sudo ./arp_spoof_si <IP target 1> <IP target 2> [OPTIONS]
+```
 
-sudo ./arp_spoof_si <IP target 1> <IP target 2> [OPTIONS]
 
 [OPTIONS]
 	-i interface : Select the interface
 
 
 Examples:
-
-	sudo ./arp_spoof_si 192.168.1.1 192.168.1.10
+```	sudo ./arp_spoof_si 192.168.1.1 192.168.1.10
 	sudo ./arp_spoof_si 10.0.1.99 10.0.1.1 -i eth1
+```
